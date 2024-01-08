@@ -1,7 +1,12 @@
 import logo from "../../assets/logo-white.svg"
 import "../../styles/Home.css"
+import { useEffect } from "react"
 
 function About() {
+    useEffect(() => {
+        document.title = "À propos"
+    }, [])
+
     return (
         <div className="App">
             <header className="App-header">

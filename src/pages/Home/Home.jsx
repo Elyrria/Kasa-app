@@ -1,10 +1,18 @@
 import logo from "../../assets/logo-red.svg"
 import "../../styles/Home.css"
+import Banner from "../../components/Banner"
+
+import { useEffect } from "react"
 
 function Home() {
+    useEffect(() => {
+        document.title = "Home"
+    }, [])
+
     return (
         <div className="App">
-            <header className="App-header">
+            <Banner />
+            <div className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
                 <p>
                     Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +25,7 @@ function Home() {
                 >
                     Learn React
                 </a>
-            </header>
+            </div>
         </div>
     )
 }
