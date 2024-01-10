@@ -9,28 +9,6 @@
         height: 223px;
     }
 }
-@mixin bannerProprety {
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-@mixin bannerHome1240 {
-    // @include styleBanner();
-    @include bannerProprety();
-    background-image: url("../assets/banner-home-1240.webp");
-    background-position: bottom;
-}
-
-@mixin bannerAbout1240 {
-    // @include styleBanner();
-    @include bannerProprety();
-    background-image: url("../assets/banner-about-1240.webp");
-    background-position: right;
-}
-@mixin bannerAbout375 {
-    @include bannerProprety();
-    background-image: url("../assets/banner-about-375.webp");
-}
 
 .bannerWrapper {
     @include styleBanner();
@@ -38,35 +16,50 @@
     display: flex;
     align-items: center;
     margin: 0 20px;
+    overflow: hidden;
     @media screen and (min-width: 376px) {
         justify-content: center;
+    }
+
+    & img {
+        @include styleBanner();
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    & .scaleAbout {
+        transform: scale(1.1);
+        @media screen and (min-width: 763px) {
+            transform: scale(1);
+        }
+    }
+    & .scaleHome {
+        transform: scale(1.85);
+        @media screen and (min-width: 763px) {
+            transform: scale(1);
+        }
     }
 
     &--opacity {
         @include styleBanner();
         position: absolute;
-        background-color: black;
-        opacity: 0.2;
+        z-index: 1;
         width: 100%;
+        background-color: black;
+        opacity: 0.25;
     }
     &__para {
-        top: 0;
-        z-index: 1;
-        padding: 31px 16px;
+        color: white;
+        z-index: 2;
+        padding: 0 100px 0 16px;
         font-size: 6.4vw;
+        @media screen and (max-width: 374px) {
+            padding: 0 16px 0 16px;
+        }
         @media screen and (min-width: 763px) {
+            padding: 0;
             font-size: 48px;
         }
-    }
-}
-
-.active-home {
-    @include bannerHome1240();
-}
-
-.active-about {
-    @include bannerAbout375();
-    @media screen and (min-width: 376px) {
-        @include bannerAbout1240()
     }
 }
