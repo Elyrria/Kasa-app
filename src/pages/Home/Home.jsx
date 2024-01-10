@@ -10,7 +10,7 @@ function Home() {
 
     return (
         <main>
-            <Banner />
+            <Banner activeBanner={"active-home"} />
             <div>
                 <h1>Home 🏠</h1>
             </div>

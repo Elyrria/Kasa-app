@@ -1,14 +1,17 @@
 import "../styles/Banner.scss"
 
-function Banner() {
-
+function Banner({ activeBanner }) {
+    console.log(activeBanner)
     return (
         //? Ajouter une props pour modifier la class active-**-** (Permettra de modifier l'image en background en fontion )
-        <div className="bannerWrapper active-home-1240">
+        <div className={`bannerWrapper ${activeBanner}`}>
             <div className="bannerWrapper--opacity"></div>
-            <p className="bannerWrapper__para">
-                Chez vous, partout et ailleurs
-            </p>
+
+            {activeBanner === "active-home" && (
+                <p className="bannerWrapper__para">
+                    Chez vous, partout et ailleurs
+                </p>
+            )}
         </div>
     )
 }

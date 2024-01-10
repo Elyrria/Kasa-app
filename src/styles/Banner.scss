@@ -10,29 +10,26 @@
     }
 }
 @mixin bannerProprety {
-    background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-size: cover;
 }
-@mixin bannerHome375 {
-    // @include styleBanner();
-    @include bannerProprety();
-    background-image: url("../assets/banner-home-375.webp");
-}
+
 @mixin bannerHome1240 {
     // @include styleBanner();
     @include bannerProprety();
     background-image: url("../assets/banner-home-1240.webp");
+    background-position: bottom;
 }
-@mixin bannerAbout375 {
-    // @include styleBanner();
-    @include bannerProprety();
-    background-image: url("../assets/banner-about-375.webp");
-}
+
 @mixin bannerAbout1240 {
     // @include styleBanner();
     @include bannerProprety();
     background-image: url("../assets/banner-about-1240.webp");
+    background-position: right;
+}
+@mixin bannerAbout375 {
+    @include bannerProprety();
+    background-image: url("../assets/banner-about-375.webp");
 }
 
 .bannerWrapper {
@@ -63,15 +60,13 @@
     }
 }
 
-.active-home-375 {
-    @include bannerHome375();
-}
-.active-home-1240 {
+.active-home {
     @include bannerHome1240();
 }
-.active-about-375 {
+
+.active-about {
     @include bannerAbout375();
-}
-.active-about-1240 {
-    @include bannerAbout1240();
+    @media screen and (min-width: 376px) {
+        @include bannerAbout1240()
+    }
 }

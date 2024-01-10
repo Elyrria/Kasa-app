@@ -22,7 +22,10 @@
             & a {
                 font-size: 12px;
                 text-wrap: nowrap;
-                gap: 26px;
+                text-decoration: none;
+            }
+            & .active {
+               text-decoration: underline;
             }
         }
     }
