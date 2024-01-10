@@ -1,0 +1,29 @@
+.header {
+    margin: 20px 0 27px 0;
+    padding: 0 20px;
+
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        & h1 {
+            margin: 0;
+        }
+
+        & img {
+            width: 75%;
+        }
+        & .nav__links {
+            display: flex;
+            gap: 20px;
+
+            & a {
+                font-size: 12px;
+                text-wrap: nowrap;
+                gap: 26px;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+body {
+    max-width: 1240px;
+    margin: auto;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$primary-color: #ff6060;
+$secondary-color: white;
+
+h1,
+h2,
+h3,
+a {
+    color: $primary-color;
+}
+
+p {
+    color: $secondary-color;
+    margin: 0;
+}

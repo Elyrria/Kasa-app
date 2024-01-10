@@ -1,0 +1,77 @@
+@mixin styleBanner {
+    border-radius: 10px;
+    height: 111px;
+    @media screen and (min-width: 376px) {
+        height: 150px;
+    }
+    @media screen and (min-width: 763px) {
+        border-radius: 25px;
+        height: 223px;
+    }
+}
+@mixin bannerProprety {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+@mixin bannerHome375 {
+    // @include styleBanner();
+    @include bannerProprety();
+    background-image: url("../assets/banner-home-375.webp");
+}
+@mixin bannerHome1240 {
+    // @include styleBanner();
+    @include bannerProprety();
+    background-image: url("../assets/banner-home-1240.webp");
+}
+@mixin bannerAbout375 {
+    // @include styleBanner();
+    @include bannerProprety();
+    background-image: url("../assets/banner-about-375.webp");
+}
+@mixin bannerAbout1240 {
+    // @include styleBanner();
+    @include bannerProprety();
+    background-image: url("../assets/banner-about-1240.webp");
+}
+
+.bannerWrapper {
+    @include styleBanner();
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    @media screen and (min-width: 376px) {
+        justify-content: center;
+    }
+
+    &--opacity {
+        @include styleBanner();
+        position: absolute;
+        background-color: black;
+        opacity: 0.2;
+        width: 100%;
+    }
+    &__para {
+        top: 0;
+        z-index: 1;
+        padding: 31px 16px;
+        font-size: 6.4vw;
+        @media screen and (min-width: 763px) {
+            font-size: 48px;
+        }
+    }
+}
+
+.active-home-375 {
+    @include bannerHome375();
+}
+.active-home-1240 {
+    @include bannerHome1240();
+}
+.active-about-375 {
+    @include bannerAbout375();
+}
+.active-about-1240 {
+    @include bannerAbout1240();
+}
