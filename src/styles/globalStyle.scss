@@ -9,3 +9,7 @@ $bg-color: #f6f6f6;
         margin: 0 60px;
     }
 }
+
+@mixin maxWidth {
+    max-width: 1240px;
+}

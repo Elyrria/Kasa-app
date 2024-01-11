@@ -2,6 +2,7 @@
 
 .header {
     margin: 20px 20px 27px 20px;
+    @include maxWidth();
     @media screen and (min-width: 620px) {
         margin: 45px 60px 50px 60px;
     }
@@ -11,13 +12,23 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        @media screen and (max-width: 245px) {
+            flex-direction: column;
+        }
 
         & h1 {
             margin: 0;
+            @media screen and (max-width: 245px) {
+                text-align: center;
+                margin-bottom: 10px;
+            }
         }
 
         & img {
             width: 75%;
+            @media screen and (max-width: 245px) {
+                min-width: 65px;
+            }
         }
         & .nav__links {
             display: flex;

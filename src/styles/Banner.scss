@@ -15,16 +15,22 @@
 .bannerWrapper {
     @include styleBanner();
     @include globalMargin();
+    @include maxWidth();
     position: relative;
     display: flex;
     align-items: center;
     overflow: hidden;
     margin-bottom: 22px;
+
     @media screen and (min-width: 376px) {
         justify-content: center;
     }
     @media screen and (min-width: 620px) {
         margin-bottom: 43px;
+    }
+    @media screen and (min-width: 1340px) {
+        margin: auto;
+        margin-bottom: 45px;
     }
 
     & img {
