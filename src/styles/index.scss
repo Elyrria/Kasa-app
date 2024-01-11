@@ -1,3 +1,5 @@
+@import "./globalStyle";
+
 body {
     max-width: 1240px;
     margin: auto;
@@ -6,9 +8,6 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
-$primary-color: #ff6060;
-$secondary-color: white;
 
 h1,
 h2,

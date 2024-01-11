@@ -1,11 +1,17 @@
+@import "./globalStyle";
+
 .footer {
     height: 209px;
-    background-color: black;
+    background-color: $tertiary-color;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 15px;
+    margin-top: 27px;
+    @media screen and (min-width: 620px) {
+        margin-top: 50px;
+    }
     &__logo {
         width: 122px;
     }
@@ -13,6 +19,6 @@
     &__para {
         text-align: center;
         width: 40%;
-        color: white;
+        color: $secondary-color;
     }
 }

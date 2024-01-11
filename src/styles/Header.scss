@@ -1,6 +1,10 @@
+@import "./globalStyle";
+
 .header {
-    margin: 20px 0 27px 0;
-    padding: 0 20px;
+    margin: 20px 20px 27px 20px;
+    @media screen and (min-width: 620px) {
+        margin: 45px 60px 50px 60px;
+    }
 
     &__nav {
         display: flex;

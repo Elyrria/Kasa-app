@@ -1,2 +1,15 @@
+@import "./globalStyle.scss";
 
-
+.wrapperGallery {
+    display: grid;
+    flex-direction: column;
+    gap: 20px;
+    height: 805px;
+    overflow: scroll;
+    @include globalMargin;
+    @media screen and (min-width: 620px) {
+        padding: 56px 50px 43px 50px;
+        border-radius: 25px;
+        background-color: $bg-color;
+    }
+}

@@ -1,3 +1,5 @@
+@import "./globalStyle";
+
 @mixin styleBanner {
     border-radius: 10px;
     height: 111px;
@@ -12,13 +14,17 @@
 
 .bannerWrapper {
     @include styleBanner();
+    @include globalMargin();
     position: relative;
     display: flex;
     align-items: center;
-    margin: 0 20px;
     overflow: hidden;
+    margin-bottom: 22px;
     @media screen and (min-width: 376px) {
         justify-content: center;
+    }
+    @media screen and (min-width: 620px) {
+        margin-bottom: 43px;
     }
 
     & img {
@@ -46,12 +52,12 @@
         position: absolute;
         z-index: 1;
         width: 100%;
-        background-color: black;
+        background-color: $tertiary-color;
         opacity: 0.25;
     }
     &__para {
-        color: white;
-        z-index: 2;
+        color: $secondary-color;
+        z-index: 1;
         padding: 0 100px 0 16px;
         font-size: 6.4vw;
         @media screen and (max-width: 374px) {
