@@ -1,3 +1,4 @@
+import "../../styles/Error.scss"
 import error from "../../assets/404.svg"
 import { Link } from "react-router-dom"
 import { useEffect } from "react"
@@ -8,11 +9,19 @@ function Error() {
     }, [])
 
     return (
-        <div>
-            <img src={error} alt="Logo erreur 404" />
-            <p>Oups! La page que vous demandez n'existe pas.</p>
-            <Link to="/">Retourner sur la page d'accueil</Link>
-        </div>
+        <main className="errorPage">
+            <img
+                className="errorPage__image"
+                src={error}
+                alt="Logo erreur 404"
+            />
+            <p className="errorPage__para">
+                Oups! La page que vous demandez n'existe pas.
+            </p>
+            <Link className="errorPage__link" to="/">
+                Retourner sur la page d'accueil
+            </Link>
+        </main>
     )
 }
 

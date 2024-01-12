@@ -70,7 +70,11 @@
             padding: 0 16px 0 16px;
         }
         @media screen and (min-width: 763px) {
+            font-size: 3.33vw;
             padding: 0;
+        }
+
+        @media screen and (min-width: 1440px) {
             font-size: 48px;
         }
     }
