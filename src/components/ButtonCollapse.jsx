@@ -1,4 +1,6 @@
 import chevron from "../assets/chevron.svg"
+import "../styles/ButtonCollapse.scss"
+
 function ButtonCollapse({ name, isActivate, setIsActivate }) {
     //! Fonction qui permettra au clic de changer l'état de isActivate
     const toggleCollapse = () => {
@@ -8,7 +10,7 @@ function ButtonCollapse({ name, isActivate, setIsActivate }) {
         <button type="button" className="collapsible" onClick={toggleCollapse}>
             {name}
             <img
-                className="collapsible__image"
+                className={`${isActivate ? "rotate" : ""} collapsible__image`}
                 src={chevron}
                 alt="Chevron fermant ou ouvrant"
                 aria-hidden="true"

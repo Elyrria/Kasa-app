@@ -21,13 +21,15 @@ function About() {
     return (
         <main>
             <Banner activeBanner={"active-about"} />
-            {dataAbout.names.map((name, index) => (
-                <Collapse
-                    key={`${name}-${index}`}
-                    name={name}
-                    description={dataAbout.descriptions[index]}
-                />
-            ))}
+            <div>
+                {dataAbout.names.map((name, index) => (
+                    <Collapse
+                        key={`${name}-${index}`}
+                        name={name}
+                        description={dataAbout.descriptions[index]}
+                    />
+                ))}
+            </div>
         </main>
     )
 }

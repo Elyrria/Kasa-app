@@ -12,32 +12,6 @@
         margin-bottom: 35px;
     }
 
-    & .collapsible {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 20px;
-        font-size: 13px;
-        background-color: $primary-color;
-        color: $secondary-color;
-        width: 100%;
-        border-radius: 5px;
-        border: none;
-        height: 30px;
-        cursor: pointer;
-        @media screen and (min-width: 1140px) {
-            height: 56px;
-            font-size: 24px;
-        }
-
-        &__image {
-            @media screen and (min-width: 1140px) {
-                width: 24px;
-            }
-        }
-    }
     & .collapseContent {
         display: none;
         overflow: hidden;

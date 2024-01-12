@@ -32,20 +32,22 @@ function Collapse({ name, description, amenities }) {
                     </div>
                 </div>
             ) : (
-                <div className="collapse">
-                    <ButtonCollapse
-                        name={name}
-                        isActivate={isActivate}
-                        setIsActivate={setIsActivate}
-                    />
-                    <div
-                        className={`${
-                            isActivate ? "active" : ""
-                        } collapseContent`}
-                    >
-                        <p className="collapseContent__para">{description}</p>
+                    <div className="collapse">
+                        <ButtonCollapse
+                            name={name}
+                            isActivate={isActivate}
+                            setIsActivate={setIsActivate}
+                        />
+                        <div
+                            className={`${
+                                isActivate ? "active" : ""
+                            } collapseContent`}
+                        >
+                            <p className="collapseContent__para">
+                                {description}
+                            </p>
+                        </div>
                     </div>
-                </div>
             )}
         </div>
     )

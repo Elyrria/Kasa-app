@@ -10,6 +10,13 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
 h1,
 h2,
 h3,
