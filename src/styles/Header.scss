@@ -1,10 +1,10 @@
 @import "./globalStyle";
 
 .header {
-    margin: 20px 20px 27px 20px;
+    margin: 27px 20px 22px 20px;
     @include maxWidth();
     @media screen and (min-width: 620px) {
-        margin: 45px 60px 50px 60px;
+        margin: 50px 60px 43px 60px;
     }
 
     &__nav {

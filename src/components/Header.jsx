@@ -1,9 +1,18 @@
 import logo from "../assets/logo-red-kasa.svg"
 import { NavLink } from "react-router-dom"
 import "../styles/Header.scss"
+import Banner from "./Banner"
+import { useEffect, useState } from "react"
+import { useLocation } from "react-router-dom"
 
 function Header() {
-    
+    const [urlActive, setUrlActive] = useState("")
+    const location = useLocation()
+
+    useEffect(() => {
+        setUrlActive(window.location.href)
+    }, [location]) // Effectue l'effet des que la location change
+
     return (
         <header className="header">
             <nav className="header__nav">
@@ -30,6 +39,13 @@ function Header() {
                     </NavLink>
                 </div>
             </nav>
+            {urlActive === "http://localhost:3000/" ? (
+                <Banner activeBanner={"bannerHome"} />
+            ) : (
+                urlActive === "http://localhost:3000/A-Propos" && (
+                    <Banner activeBanner={"bannerAbout"} />
+                )
+            )}
         </header>
     )
 }

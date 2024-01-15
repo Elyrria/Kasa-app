@@ -20,7 +20,6 @@ function About() {
 
     return (
         <main>
-            <Banner activeBanner={"active-about"} />
             <div>
                 {dataAbout.names.map((name, index) => (
                     <Collapse

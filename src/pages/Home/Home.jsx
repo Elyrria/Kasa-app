@@ -12,7 +12,6 @@ function Home() {
 
     return (
         <main>
-            <Banner activeBanner={"active-home"} />
             <div className="wrapperGallery">
                 {dataHousings.map((housings) => (
                     <Card

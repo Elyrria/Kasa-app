@@ -9,7 +9,6 @@ import Footer from "./components/Footer"
 import Error from "./pages/Error/Error"
 import Housings from "./pages/Housings/Housing"
 
-
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
     <React.StrictMode>

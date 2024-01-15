@@ -6,18 +6,18 @@ import "../styles/Banner.scss"
 
 const sizeBanner = [1240, 375]
 
-function Banner({ activeBanner }) {
+function Banner({activeBanner}) {
     return (
         <div className="bannerWrapper">
             <div className="bannerWrapper--opacity"></div>
             {/* //! Condition qui permet de vérifier si le texte doit être affiché  */}
-            {activeBanner === "active-home" && (
+            {activeBanner === "bannerHome" && (
                 <p className="bannerWrapper__para">
                     Chez vous, partout et ailleurs
                 </p>
             )}
             {/* //! Condition qui permet de vérifier quelle image afficher dans la banière  */}
-            {activeBanner === "active-home" ? (
+            {activeBanner === "bannerHome" ? (
                 <img
                     className="scaleHome"
                     src={bannerHome1240}
@@ -26,13 +26,15 @@ function Banner({ activeBanner }) {
                     alt="Photographie de falaises avec la mer"
                 />
             ) : (
-                <img
-                    className="scaleAbout"
-                    src={bannerAbout1240}
-                    srcSet={`${bannerAbout1240} ${sizeBanner[0]}w, ${bannerAbout375} ${sizeBanner[1]}w `}
-                    sizes={`(max-width: ${sizeBanner[1]}px) ${sizeBanner[1]}px, ${sizeBanner[0]}px`}
-                    alt="Photographie d'un fleuve avec des montagnes'"
-                />
+                activeBanner === "bannerAbout" && (
+                    <img
+                        className="scaleAbout"
+                        src={bannerAbout1240}
+                        srcSet={`${bannerAbout1240} ${sizeBanner[0]}w, ${bannerAbout375} ${sizeBanner[1]}w `}
+                        sizes={`(max-width: ${sizeBanner[1]}px) ${sizeBanner[1]}px, ${sizeBanner[0]}px`}
+                        alt="Photographie d'un fleuve avec des montagnes'"
+                    />
+                )
             )}
         </div>
     )
