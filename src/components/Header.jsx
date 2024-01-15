@@ -11,7 +11,7 @@ function Header() {
 
     useEffect(() => {
         setUrlActive(window.location.href)
-    }, [location]) // Effectue l'effet des que la location change
+    }, [location]) // Effectue l'effet des que l'url change change
 
     return (
         <header className="header">

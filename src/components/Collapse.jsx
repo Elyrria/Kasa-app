@@ -40,7 +40,7 @@ function Collapse({ name, description, amenities }) {
                         />
                         <div
                             className={`${
-                                isActivate ? "active" : ""
+                                isActivate ? "open" : ""
                             } collapseContent`}
                         >
                             <p className="collapseContent__para">

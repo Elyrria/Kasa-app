@@ -1,6 +1,5 @@
 import "../../styles/Home.scss"
 import { useEffect } from "react"
-import Banner from "../../components/Banner"
 import Collapse from "../../components/Collapse"
 
 const dataAbout = {

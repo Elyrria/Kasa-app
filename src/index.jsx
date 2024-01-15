@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import ReactDOM from "react-dom/client"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import "./styles/index.scss"
@@ -18,7 +18,7 @@ root.render(
                 <Route path="/" element={<Home />} />
                 <Route path="/a-Propos" element={<About />} />
                 <Route
-                    path={"/hebergement/:nameHousing"}
+                    path={"/hebergement/:id"}
                     element={<Housings />}
                 />
                 <Route path="*" element={<Error />} />
