@@ -1,4 +1,4 @@
-import chevron from "../assets/chevron.svg"
+import chevron from "../assets/chevron-collapse.svg"
 import "../styles/ButtonCollapse.scss"
 
 function ButtonCollapse({ name, isActivate, setIsActivate }) {

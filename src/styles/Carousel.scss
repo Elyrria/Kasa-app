@@ -1,0 +1,75 @@
+@import "./globalStyle.scss";
+
+.carousel {
+    position: relative;
+    @include globalMargin();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 335px;
+    height: 255px;
+    margin-bottom: 15px;
+    @media screen and (min-width: 620px) {
+        margin-bottom: 30px;
+        height: 300px;
+    }
+
+    @media screen and (min-width: 1240px) {
+        height: 415px;
+    }
+    &__slide {
+        border-radius: 10px;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        &--hidden {
+            display: none;
+        }
+    }
+    &__chevron {
+        position: absolute;
+        max-width: 24px;
+        min-height: 24px;
+        // top: 8.5rem;
+        @media screen and (min-width: 620px) {
+            max-width: 32px;
+            min-height: 32px;
+        }
+        @media screen and (min-width: 840px) {
+            max-width: 46px;
+            min-height: 46px;
+        }
+        @media screen and (min-width: 1240px) {
+            max-width: 96px;
+            min-height: 96px;
+            // top: 8.6rem;
+        }
+        &Right {
+            right: 1rem;
+        }
+        &Left {
+            left: 1rem;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__indicator {
+        position: absolute;
+        color: $secondary-color;
+        bottom: 0.6rem;
+        display: none;
+        margin-bottom: 24px;
+        @media screen and (min-width: 620px) {
+            font-size: 14px;
+            display: inline;
+        }
+        @media screen and (min-width: 840px) {
+            font-size: 16px;
+        }
+        @media screen and (min-width: 1240px) {
+            font-size: 18px;
+        }
+    }
+}
