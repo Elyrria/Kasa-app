@@ -1,7 +1,8 @@
 @import "./globalStyle";
 
-.collapse {
+.collapseContainer__collapse {
     & .collapsible {
+        font-family: "Montserrat", sans-serif;
         position: relative;
         z-index: 1;
         display: flex;
@@ -16,14 +17,18 @@
         border: none;
         height: 30px;
         cursor: pointer;
-        @media screen and (min-width: 1140px) {
+        @media screen and (min-width: 1145px) {
+            height: 44px;
+            font-size: 16px;
+        }
+        @media screen and (min-width: 1360px) {
             height: 56px;
             font-size: 24px;
         }
 
         &__image {
             transition: transform 0.5s ease-in-out;
-            @media screen and (min-width: 1140px) {
+            @media screen and (min-width: 1145px) {
                 width: 24px;
             }
         }
@@ -31,5 +36,4 @@
     & .rotate {
         transform: rotate(-180deg);
     }
-   
 }

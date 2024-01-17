@@ -2,13 +2,13 @@ import "../styles/Collapse.scss"
 import { useState } from "react"
 import ButtonCollapse from "./ButtonCollapse"
 
-function Collapse({ name, description, amenities }) {
+function Collapse({ name, description, equipments }) {
     const [isActivate, setIsActivate] = useState(false)
 
     return (
-        <div>
-            {Array.isArray(amenities) && amenities.length > 0 ? (
-                <div className="collapse">
+        <div className="collapseContainer">
+            {Array.isArray(equipments) && equipments.length > 0 ? (
+                <div className="collapseContainer__collapse">
                     <ButtonCollapse
                         name={name}
                         isActivate={isActivate}
@@ -16,38 +16,33 @@ function Collapse({ name, description, amenities }) {
                     />
                     <div
                         className={`${
-                            isActivate ? "active" : ""
+                            isActivate ? "open" : ""
                         } collapseContent`}
                     >
-                        <ul>
-                            {amenities.map((amenity, index) => (
-                                <li
-                                    key={`${amenity}-${index}`}
-                                    className="collapseContent__li"
-                                >
-                                    {amenity}
+                        <ul className="collapseContent__list">
+                            {equipments.map((equipement, index) => (
+                                <li key={`${equipement}-${index}`}>
+                                    {equipement}
                                 </li>
                             ))}
                         </ul>
                     </div>
                 </div>
             ) : (
-                    <div className="collapse">
-                        <ButtonCollapse
-                            name={name}
-                            isActivate={isActivate}
-                            setIsActivate={setIsActivate}
-                        />
-                        <div
-                            className={`${
-                                isActivate ? "open" : ""
-                            } collapseContent`}
-                        >
-                            <p className="collapseContent__para">
-                                {description}
-                            </p>
-                        </div>
+                <div className="collapseContainer__collapse">
+                    <ButtonCollapse
+                        name={name}
+                        isActivate={isActivate}
+                        setIsActivate={setIsActivate}
+                    />
+                    <div
+                        className={`${
+                            isActivate ? "open" : ""
+                        } collapseContent`}
+                    >
+                        <p className="collapseContent__para">{description}</p>
                     </div>
+                </div>
             )}
         </div>
     )

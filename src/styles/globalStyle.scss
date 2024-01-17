@@ -13,5 +13,13 @@ $bg-color: #f6f6f6;
 }
 
 @mixin maxWidth {
+    max-width: 1440px;
+}
+
+@mixin maxWidthContainer {
     max-width: 1240px;
+}
+
+@mixin borderRadius10px {
+    border-radius: 10px;
 }

@@ -19,7 +19,7 @@ function About() {
 
     return (
         <main>
-            <div>
+            <div className="collapses">
                 {dataAbout.names.map((name, index) => (
                     <Collapse
                         key={`${name}-${index}`}

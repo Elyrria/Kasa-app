@@ -1,7 +1,7 @@
 @import "./globalStyle";
 
 @mixin styleBanner {
-    border-radius: 10px;
+   @include borderRadius10px();
     height: 111px;
     @media screen and (min-width: 376px) {
         height: 150px;
@@ -15,11 +15,13 @@
 .bannerWrapper {
     @include styleBanner();
     @include maxWidth();
+    @include maxWidthContainer();
     position: relative;
     display: flex;
     align-items: center;
     overflow: hidden;
     margin-top: 22px;
+    margin: auto;
 
     @media screen and (min-width: 376px) {
         justify-content: center;
@@ -31,17 +33,18 @@
     & img {
         @include styleBanner();
         position: absolute;
-        object-fit: cover;
         width: 100%;
     }
 
     & .scaleAbout {
+        //Zoom pour correspondre à la maquette
         transform: scale(1.1);
         @media screen and (min-width: 763px) {
             transform: scale(1);
         }
     }
     & .scaleHome {
+        //Zoom pour correspondre à la maquette
         transform: scale(1.85);
         @media screen and (min-width: 763px) {
             transform: scale(1);

@@ -1,8 +1,8 @@
 @import "./globalStyle";
 
 body {
+    @include maxWidth();
     box-sizing: border-box;
-    max-width: 1440px;
     margin: auto;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
@@ -27,4 +27,8 @@ a {
 p {
     color: $secondary-color;
     margin: 0;
+}
+
+img {
+    object-fit: cover;
 }

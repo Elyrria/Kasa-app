@@ -8,10 +8,12 @@
     }
 
     &__nav {
+        @include maxWidthContainer();
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        margin: auto;
         @media screen and (max-width: 245px) {
             flex-direction: column;
         }

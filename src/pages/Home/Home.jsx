@@ -11,12 +11,12 @@ function Home() {
     return (
         <main>
             <div className="wrapperGallery">
-                {dataHousings.map((housings) => (
+                {dataHousings.map((housing) => (
                     <Card
-                        key={housings.id}
-                        id={housings.id}
-                        cover={housings.cover}
-                        title={housings.title}
+                        key={housing.id}
+                        id={housing.id}
+                        cover={housing.cover}
+                        title={housing.title}
                     />
                 ))}
             </div>
