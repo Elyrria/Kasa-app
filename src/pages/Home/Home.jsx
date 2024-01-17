@@ -10,7 +10,7 @@ function Home() {
 
     return (
         <main>
-            <div className="wrapperGallery">
+            <div className="wrapperGallery" aria-label="galerie d'hébergement">
                 {dataHousings.map((housing) => (
                     <Card
                         key={housing.id}

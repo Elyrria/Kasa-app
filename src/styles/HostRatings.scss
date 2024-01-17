@@ -17,7 +17,7 @@
         width: 50%;
         @media screen and (min-width: 1360px) {
             width: 100%;
-            justify-content: end;
+            justify-content: flex-end;
         }
         & .star {
             @media screen and (min-width: 1360px) {
@@ -29,7 +29,7 @@
     &__host {
         display: flex;
         align-items: center;
-        justify-content: end;
+        justify-content: flex-end;
         gap: 10.5px;
         width: 50%;
         height: 33px;

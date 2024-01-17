@@ -6,7 +6,10 @@ function HostRatings({ hostRating, hostName, hostPicture }) {
     const range = [1, 2, 3, 4, 5]
     return (
         <div className="ratingContainer">
-            <div className="ratingContainer__ratings">
+            <div
+                className="ratingContainer__ratings"
+                aria-label={`note de ${hostRating} sur ${range.length}`}
+            >
                 {range.map((rangeElem, index) =>
                     hostRating >= rangeElem ? (
                         <img

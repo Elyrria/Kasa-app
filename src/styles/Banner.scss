@@ -14,7 +14,6 @@
 
 .bannerWrapper {
     @include styleBanner();
-    @include maxWidth();
     @include maxWidthContainer();
     position: relative;
     display: flex;

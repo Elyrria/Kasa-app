@@ -8,7 +8,7 @@ const sizeBanner = [1240, 375]
 
 function Banner({activeBanner}) {
     return (
-        <div className="bannerWrapper">
+        <div className="bannerWrapper" aria-labelledby="bannière">
             <div className="bannerWrapper--opacity"></div>
             {/* //! Condition qui permet de vérifier si le texte doit être affiché  */}
             {activeBanner === "bannerHome" && (

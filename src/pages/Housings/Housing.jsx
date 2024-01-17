@@ -12,7 +12,6 @@ function Housings() {
     const location = useLocation()
     //Permet de récupérer la clé de la route enfant (tous ce qui est après hebergement/)
     const { id } = useParams()
-    const housingData = getDatabyId(id, navigate)
 
     useEffect(() => {
         const isValid = isValidate(id)
@@ -21,7 +20,14 @@ function Housings() {
             navigate("/error")
         }
     }, [id, location, navigate])
-    console.log(housingData.equipments)
+
+    const housingData = getDatabyId(id, navigate)
+
+    if (!housingData) {
+        navigate("/error")
+        return null
+    }
+
     return (
         <main>
             <Carousel
@@ -77,7 +83,8 @@ const getDatabyId = (id, navigate) => {
     if (foundData) {
         return foundData
     } else {
-        return navigate("/error")
+        navigate("/error")
+        return null
     }
 }
 
