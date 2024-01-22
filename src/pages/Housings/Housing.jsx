@@ -21,6 +21,15 @@ function Housings() {
         }
     }, [id, location, navigate])
 
+    useEffect(() => {
+        const housingData = getDatabyId(id, navigate)
+        if (housingData === null) {
+            navigate("/error")
+        } else {
+            document.title = housingData.title
+        }
+    }, [id, navigate])
+
     const housingData = getDatabyId(id, navigate)
 
     if (!housingData) {
@@ -76,7 +85,7 @@ const isValidate = (id) => {
     return idDataHousings.includes(id)
 }
 
-const getDatabyId = (id, navigate) => {
+const getDatabyId = (id) => {
     const foundData = dataHousings.find((item) => item.id === id)
 
     if (foundData) {
