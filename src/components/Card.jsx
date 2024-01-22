@@ -6,7 +6,11 @@ function Card({ cover, title, id }) {
         <div className="cards">
             <Link className="cards__links" to={`/hebergement/${id}`}>
                 <div className="cards__linearOppacity"></div>
-                <img className="cards__img" src={cover} alt={title} />
+                <img
+                    className="cards__img"
+                    src={cover}
+                    alt={`Photographie : ${title}`}
+                />
                 <h2 className="cards__titleCard">{title}</h2>
             </Link>
         </div>

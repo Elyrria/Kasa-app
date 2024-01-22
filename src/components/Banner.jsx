@@ -6,9 +6,9 @@ import "../styles/Banner.scss"
 
 const sizeBanner = [1240, 375]
 
-function Banner({activeBanner}) {
+function Banner({ activeBanner }) {
     return (
-        <div className="bannerWrapper" aria-labelledby="bannière">
+        <div className="bannerWrapper">
             <div className="bannerWrapper--opacity"></div>
             {/* //! Condition qui permet de vérifier si le texte doit être affiché  */}
             {activeBanner === "bannerHome" && (
@@ -23,7 +23,7 @@ function Banner({activeBanner}) {
                     src={bannerHome1240}
                     srcSet={` ${bannerHome375} ${sizeBanner[1]}w, ${bannerHome1240} ${sizeBanner[0]}w  `}
                     sizes={`(max-width: ${sizeBanner[1]}px) ${sizeBanner[1]}px, ${sizeBanner[0]}px`}
-                    alt="Photographie de falaises avec la mer"
+                    alt="Photographie de falaises en bord de mer"
                 />
             ) : (
                 activeBanner === "bannerAbout" && (

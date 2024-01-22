@@ -24,7 +24,6 @@ function Housings() {
     const housingData = getDatabyId(id, navigate)
 
     if (!housingData) {
-        navigate("/error")
         return null
     }
 
@@ -83,7 +82,6 @@ const getDatabyId = (id, navigate) => {
     if (foundData) {
         return foundData
     } else {
-        navigate("/error")
         return null
     }
 }
