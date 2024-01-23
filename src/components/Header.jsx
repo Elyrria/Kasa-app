@@ -17,7 +17,7 @@ function Header() {
         <header className="header">
             <nav className="header__nav">
                 <h1 aria-label="Kasa">
-                    <img src={logo} alt="Kasa"/>
+                    <img src={logo} alt="Kasa" />
                 </h1>
                 <div className="nav__links">
                     <NavLink

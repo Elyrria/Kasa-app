@@ -63,7 +63,7 @@ function Housings() {
                         hostPicture={housingData.host.picture}
                     />
                 </div>
-                <div className="collapses collapsesHousings">
+                <div className="collapses collapsesHousings"> 
                     <Collapse
                         name={"Description"}
                         description={housingData.description}
