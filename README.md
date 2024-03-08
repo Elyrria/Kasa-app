@@ -10,7 +10,11 @@ Faites la commande `npm install` pour installer les dépendances puis `npm start
 
 # Kasa App - Créez une application web de location immobilière avec React
 
-## Scénario :
+## Projet
+
+Projet 6 Kasa
+
+### Scénario :
 
 En tant que développeur Front-End en freelance, l'agence de location immobilière me recrute pour développer leur nouvelle plateforme web. Le site de Kasa a été codé il ya 10 ans en ASP.NET avec un code legacy important. la CTO a donc lancé une refonte totale pour passer à une stack complète en JavaScrip avec NodeJS et React.
 
